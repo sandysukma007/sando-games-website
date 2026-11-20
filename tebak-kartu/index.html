@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Tebak Kartu — Sando Games</title>
+  <meta name="description" content="Tebak Kartu: ingat kartunya, ikuti kocokannya, tebak yang benar. Game kartu mobile dari Sando Games dengan koleksi kartu bergambar, tiga mode, dan hadiah harian.">
+  <meta property="og:title" content="Tebak Kartu — Sando Games">
+  <meta property="og:description" content="Ingat kartunya. Ikuti kocokannya. Tebak yang benar.">
+  <meta property="og:image" content="../assets/img/icon.webp">
+  <meta name="theme-color" content="#0b1433">
+  <link rel="icon" href="../assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Cinzel:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav" id="top">
+    <a class="brand" href="#top" aria-label="Tebak Kartu, ke atas">
+      <img src="../assets/img/icon.webp" alt="" width="40" height="40">
+      <span>Tebak Kartu</span>
+    </a>
+    <nav class="nav-links" aria-label="Navigasi utama">
+      <a href="#main">Coba main</a>
+      <a href="#mode">Mode</a>
+      <a href="#koleksi">Koleksi</a>
+      <a href="#hadiah">Hadiah</a>
+      <a href="#trailer">Trailer</a>
+      <a class="studio-link" href="../index.html">← Sando Games</a>
+    </nav>
+    <a class="btn btn-gold btn-sm" href="#unduh">Dapatkan</a>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-text">
+        <p class="eyebrow">Sando Games mempersembahkan</p>
+        <h1>Tebak Kartu</h1>
+        <p class="lead">Ingat kartunya. Ikuti kocokannya. <strong>Tebak yang benar.</strong></p>
+        <p class="sub">Game kartu mobile yang gampang dimainkan tapi bikin penasaran. Latih ingatan dan ketelitian matamu, kumpulkan koin, lalu koleksi set kartu bergambar yang menawan.</p>
+        <div class="hero-cta">
+          <a class="btn btn-gold" href="#main">Coba langsung di sini</a>
+          <a class="btn btn-ghost" href="#trailer">Tonton trailer</a>
+        </div>
+        <ul class="hero-facts" aria-label="Sekilas">
+          <li><b>3</b> mode permainan</li>
+          <li><b>9</b> set kartu</li>
+          <li><b>2</b> bahasa</li>
+        </ul>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <img class="fan fan-l" src="../assets/sets/topeng_1.webp" alt="">
+        <img class="fan fan-r" src="../assets/sets/natal_0.webp" alt="">
+        <img class="fan fan-c" src="../assets/sets/delta_0.webp" alt="">
+        <div class="hero-glow"></div>
+      </div>
+    </section>
+
+    <!-- DEMO -->
+    <section class="section demo" id="main">
+      <div class="section-head">
+        <p class="eyebrow">Coba main</p>
+        <h2>Bisa ikuti kocokannya?</h2>
+        <p>Ingat di mana kartu target, perhatikan saat kartu dikocok, lalu ketuk kartu yang benar. Setiap tebakan benar membuat kocokan makin cepat.</p>
+      </div>
+      <div class="table">
+        <div class="table-hud">
+          <div><span>Skor</span><b id="score">0</b></div>
+          <div><span>Beruntun</span><b id="streak">0</b></div>
+          <div><span>Nyawa</span><b id="lives" aria-label="3 nyawa">♥♥♥</b></div>
+        </div>
+        <p class="table-msg" id="msg" aria-live="polite">Tekan <b>Mulai</b> untuk bermain.</p>
+        <div class="board" id="board" aria-label="Meja kartu"></div>
+        <div class="table-actions">
+          <button class="btn btn-gold" id="start" type="button">Mulai</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARA MAIN -->
+    <section class="section steps">
+      <div class="section-head">
+        <p class="eyebrow">Cara main</p>
+        <h2>Tiga langkah, satu detik lengah bisa salah</h2>
+      </div>
+      <ol class="step-list">
+        <li>
+          <span class="step-no">1</span>
+          <h3>Ingat kartunya</h3>
+          <p>Kartu target ditunjukkan sebentar. Hafalkan posisinya baik-baik.</p>
+        </li>
+        <li>
+          <span class="step-no">2</span>
+          <h3>Ikuti kocokannya</h3>
+          <p>Kartu ditutup lalu dikocok. Makin tinggi level, makin banyak kartu dan makin cepat gerakannya.</p>
+        </li>
+        <li>
+          <span class="step-no">3</span>
+          <h3>Tebak yang benar</h3>
+          <p>Ketuk kartu yang kamu yakini. Tebakan beruntun memberi combo, skor, dan koin ekstra.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- MODE -->
+    <section class="section modes" id="mode">
+      <div class="section-head">
+        <p class="eyebrow">Mode permainan</p>
+        <h2>Pilih tantanganmu</h2>
+      </div>
+      <div class="mode-grid">
+        <article class="mode mode-green">
+          <h3>Klasik</h3>
+          <p class="mode-cap">Nyawa &amp; level naik bertahap</p>
+          <p>Mode utama untuk semua pemain. Pilih tingkat kesulitan dan kumpulkan skor setinggi mungkin.</p>
+          <ul class="diff">
+            <li><b>Mudah</b> 5 nyawa · 3–4 kartu · pelan · skor &amp; koin 1×</li>
+            <li><b>Sedang</b> 3 nyawa · 3–5 kartu · sedang · skor &amp; koin 2×</li>
+            <li><b>Sulit</b> 2 nyawa · 4–6 kartu · kilat · skor &amp; koin 3×</li>
+          </ul>
+        </article>
+        <article class="mode mode-yellow">
+          <h3>Lawan Waktu</h3>
+          <p class="mode-cap">90 detik, tebak sebanyak mungkin</p>
+          <p>Berpacu dengan jam. Setiap tebakan benar menambah waktu, setiap salah memotongnya.</p>
+          <ul class="diff">
+            <li><b>Benar</b> +3 detik</li>
+            <li><b>Salah</b> −5 detik</li>
+          </ul>
+        </article>
+        <article class="mode mode-red">
+          <h3>Tanpa Batas</h3>
+          <p class="mode-cap">1 nyawa, makin lama makin sulit</p>
+          <p>Hanya satu kesempatan. Mulai dari Mudah, lalu kocokan terus bertambah cepat. Seberapa jauh kamu bisa bertahan?</p>
+          <ul class="diff">
+            <li><b>Level 1–4</b> Mudah</li>
+            <li><b>Level 5–9</b> Sedang</li>
+            <li><b>Level 10+</b> Sulit</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- KOLEKSI -->
+    <section class="section collection" id="koleksi">
+      <div class="section-head">
+        <p class="eyebrow">Toko kartu</p>
+        <h2>Koleksi set kartu bergambar</h2>
+        <p>Setiap set berisi 52 kartu dengan ilustrasi sendiri. Kumpulkan koin dari bermain, lalu ganti tampilan kartu, belakang kartu, meja, dan efek kilau sesukamu.</p>
+      </div>
+
+      <div class="sets" data-sets>
+        <div class="set-tabs" role="tablist" aria-label="Set kartu"></div>
+        <div class="set-stage">
+          <div class="set-cards" aria-live="polite"></div>
+          <div class="set-info">
+            <span class="rarity" data-rarity></span>
+            <h3 data-name></h3>
+            <p data-desc></p>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="sub-head">Belakang kartu</h3>
+      <div class="backs" aria-label="Pilihan belakang kartu">
+        <figure><img src="../assets/backs/ukiran-koral.webp" alt="Belakang kartu Ukiran Koral"><figcaption>Ukiran Koral</figcaption></figure>
+        <figure><img src="../assets/backs/kisi-neon.webp" alt="Belakang kartu Kisi Neon"><figcaption>Kisi Neon</figcaption></figure>
+        <figure><img src="../assets/backs/pusaran-tropis.webp" alt="Belakang kartu Pusaran Tropis"><figcaption>Pusaran Tropis</figcaption></figure>
+        <figure><img src="../assets/backs/medieval-heraldry.webp" alt="Belakang kartu Lambang Ksatria"><figcaption>Lambang Ksatria</figcaption></figure>
+        <figure><img src="../assets/backs/goblin-foundry.webp" alt="Belakang kartu Bengkel Goblin"><figcaption>Bengkel Goblin</figcaption></figure>
+        <figure><img src="../assets/backs/elf-forest-court.webp" alt="Belakang kartu Istana Elf"><figcaption>Istana Elf</figcaption></figure>
+        <figure><img src="../assets/backs/arus-prisma.webp" alt="Belakang kartu Arus Prisma"><figcaption>Arus Prisma</figcaption></figure>
+        <figure><img src="../assets/backs/pinisi-nusantara.webp" alt="Belakang kartu Pinisi Nusantara"><figcaption>Pinisi Nusantara</figcaption></figure>
+        <figure><img src="../assets/backs/delta-emas.webp" alt="Belakang kartu Delta Emas"><figcaption>Delta Emas</figcaption></figure>
+        <figure class="exclusive"><img src="../assets/backs/orbit-senja.webp" alt="Belakang kartu Orbit Senja"><figcaption>Orbit Senja <span>Eksklusif</span></figcaption></figure>
+      </div>
+    </section>
+
+    <!-- HADIAH -->
+    <section class="section rewards" id="hadiah">
+      <div class="section-head">
+        <p class="eyebrow">Selalu ada alasan kembali</p>
+        <h2>Hadiah, misi, dan event</h2>
+      </div>
+      <div class="reward-grid">
+        <article class="reward reward-daily">
+          <h3>Hadiah login 7 hari</h3>
+          <p>Masuk setiap hari untuk koin. Hari ke-7 memberi belakang kartu eksklusif yang tidak dijual di toko.</p>
+          <ol class="days" aria-label="Hadiah per hari">
+            <li><span>Hari 1</span><b>+25</b></li>
+            <li><span>Hari 2</span><b>+40</b></li>
+            <li><span>Hari 3</span><b>+60</b></li>
+            <li><span>Hari 4</span><b>+80</b></li>
+            <li><span>Hari 5</span><b>+100</b></li>
+            <li><span>Hari 6</span><b>+150</b></li>
+            <li class="day7"><img src="../assets/backs/orbit-senja.webp" alt=""><span>Hari 7</span><b>Orbit Senja</b></li>
+          </ol>
+        </article>
+        <article class="reward reward-xmas">
+          <span class="tag-red">Event Natal · 20 Nov – 25 Des</span>
+          <h3>Login harian Natal</h3>
+          <p>Selama event, setiap login memberi <b>+10 koin</b>. Dan hanya pada <b>25 Desember</b>, kamu bisa mengklaim set <b>Kartu Natal</b> edisi terbatas.</p>
+          <div class="xmas-cards" aria-hidden="true">
+            <img src="../assets/sets/natal_1.webp" alt="">
+            <img src="../assets/sets/natal_0.webp" alt="">
+            <img src="../assets/sets/natal_2.webp" alt="">
+          </div>
+        </article>
+        <article class="reward">
+          <h3>Misi harian</h3>
+          <p>Selesaikan misi baru setiap hari dan klaim bonus koin setelah semuanya tuntas.</p>
+        </article>
+        <article class="reward">
+          <h3>Combo &amp; rekor</h3>
+          <p>Tebakan beruntun memicu combo "Luar biasa!". Pecahkan rekormu lalu bagikan skornya ke teman.</p>
+        </article>
+        <article class="reward">
+          <h3>Bahasa Indonesia &amp; Inggris</h3>
+          <p>Mainkan dalam bahasa yang paling nyaman untukmu, bisa diganti kapan saja di pengaturan.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- TRAILER -->
+    <section class="section trailer" id="trailer">
+      <div class="trailer-text">
+        <p class="eyebrow">Trailer</p>
+        <h2>Lihat Tebak Kartu beraksi</h2>
+        <p>Tiga puluh detik untuk melihat kocokan, combo, mode permainan, dan koleksi kartunya.</p>
+      </div>
+      <div class="phone">
+        <video src="../assets/img/trailer.mp4" poster="../assets/img/trailer-poster.jpg" controls playsinline preload="none"></video>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="unduh">
+      <img src="../assets/img/icon.webp" alt="" width="112" height="112">
+      <h2>Siap menebak?</h2>
+      <p>Tebak Kartu segera hadir untuk Android.</p>
+      <div class="cta-buttons">
+        <a class="btn btn-gold" href="#main">Coba demonya dulu</a>
+        <a class="btn btn-ghost" href="https://trakteer.id/wvdgbazzj7ioouklnxdr" target="_blank" rel="noopener">Dukung developer di Trakteer</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p><a href="../index.html"><b>Sando Games</b></a> · Tebak Kartu</p>
+    <p><a href="https://trakteer.id/wvdgbazzj7ioouklnxdr" target="_blank" rel="noopener">Dukung kami di Trakteer</a></p>
+    <p>© 2026 Sando Games. Semua ilustrasi kartu adalah karya Sando Games.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
